@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">converterTest</string>
+    <string name="label">Amount</string>
+    <string name="count">Count</string>
+    <string name="from_label">From:</string>
+    <string name="to_label">To:</string>
+    <string name="usd">USD</string>
+    <string name="eur">EUR</string>
+</resources>
