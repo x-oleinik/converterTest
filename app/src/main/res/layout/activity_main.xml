@@ -7,21 +7,49 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/amount_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result_label"
+        android:layout_marginBottom="@dimen/_8dp"
+        app:layout_constraintBottom_toTopOf="@id/amount_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/amount_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/from"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:background="@drawable/curr_background"
+        android:textSize="@dimen/_text16"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:padding="@dimen/_16dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/from_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/from_label"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@id/from"
-        app:layout_constraintTop_toTopOf="@id/from"
-        app:layout_constraintBottom_toBottomOf="@id/from"/>
+        android:layout_marginBottom="@dimen/_8dp"
+        app:layout_constraintBottom_toTopOf="@id/from"
+        app:layout_constraintStart_toStartOf="@id/from"
+        app:layout_constraintEnd_toEndOf="@id/from"/>
     <TextView
+        android:id="@+id/to_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/to_label"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@id/to"
-        app:layout_constraintTop_toTopOf="@id/from"
-        app:layout_constraintBottom_toBottomOf="@id/from"/>
+        android:layout_marginBottom="@dimen/_8dp"
+        app:layout_constraintBottom_toTopOf="@id/to"
+        app:layout_constraintStart_toStartOf="@id/to"
+        app:layout_constraintEnd_toEndOf="@id/to"/>
 
     <TextView
         android:id="@+id/from"
@@ -34,9 +62,20 @@
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@id/outlinedTextField"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/to"
+        app:layout_constraintEnd_toStartOf="@id/swap"
         android:layout_marginBottom="@dimen/_16dp"
         />
+
+    <ImageView
+        android:id="@+id/swap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_swap"
+        app:layout_constraintTop_toTopOf="@id/from"
+        app:layout_constraintBottom_toBottomOf="@id/from"
+        app:layout_constraintStart_toEndOf="@id/from"
+        app:layout_constraintEnd_toStartOf="@id/to"/>
+
     <TextView
         android:id="@+id/to"
         style="@style/Widget.MaterialComponents.TextView"
@@ -49,7 +88,7 @@
         app:layout_constraintTop_toTopOf="@id/from"
         app:layout_constraintBottom_toBottomOf="@id/from"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/from"
+        app:layout_constraintStart_toEndOf="@id/swap"
         />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -67,6 +106,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_field"
             android:layout_width="match_parent"
+            android:hint="@string/_00_00"
+            android:gravity="center"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal" />
 

@@ -4,6 +4,11 @@
     <string name="count">Count</string>
     <string name="from_label">From:</string>
     <string name="to_label">To:</string>
+    <string name="result_label">Result:</string>
     <string name="usd">USD</string>
     <string name="eur">EUR</string>
+    <string name="_00_00">00.00</string>
+    <string name="_error_title">Error</string>
+    <string name="empty_error">Nothing to count, enter any amount to operate</string>
+    <string name="no_connection">There is no internet connection available.\nBut no worries: we will use the latest rates to count.</string>
 </resources>
